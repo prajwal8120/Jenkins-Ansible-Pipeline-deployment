@@ -11,7 +11,7 @@ pipeline {
   stages{
     stage('checkout the project') {
       steps {
-        git branch: 'main', url: 'https://github.com/cbabu85/Java-Maven-Pipline.git'
+        git branch: 'main', url: 'https://github.com/cbabu85/Jenkins-Ansible-Pipeline.git'
       }
     }
     stage('Package'){
@@ -58,12 +58,12 @@ pipeline {
 
   }   
                  
- //  post {
- //     success{ 
- //        slackSend channel: 'devops-pipeline-demo', message: 'Pipeline Built Successfully'
-//      }
-//      failure {
-//         slackSend channel: 'devops-pipeline-demo', message: 'Pipeline Failed'
- //     }
-//   }    
+      post {
+      success{ 
+         slackSend channel: 'devops-pipeline-demo', message: 'Pipeline Built Successfully'
+      }
+      failure {
+         slackSend channel: 'devops-pipeline-demo', message: 'Pipeline Failed'
+      }
+   }    
 }
