@@ -35,22 +35,22 @@ pipeline {
 //            }
  //       } 
 //     }
-//     stage('Build the Docker Image'){
-//      steps {
-//         script {
-//        dockerImage = docker.build registry + ":$BUILD_NUMBER"
-//            }
-//        }
-//     }
-//     stage('Push the Docker Image to ECR'){
-//      steps {
-//         script {
-//         docker.withRegistry("http://" + registry, "ecr:ap-south-1:" + registryCredential) { 
- //        dockerImage.push()
-//                            }
-//                     }
-//               }
-//        }
+     stage('Build the Docker Image'){
+      steps {
+        script {
+        dockerImage = docker.build registry + ":$BUILD_NUMBER"
+            }
+        }
+     }
+     stage('Push the Docker Image to ECR'){
+      steps {
+         script {
+         docker.withRegistry("http://" + registry, "ecr:ap-south-1:" + registryCredential) { 
+         dockerImage.push()
+                            }
+                     }
+               }
+        }
 
 
 
