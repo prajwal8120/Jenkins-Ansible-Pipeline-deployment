@@ -30,6 +30,6 @@
       shell: docker pull 107414687854.dkr.ecr.ap-south-1.amazonaws.com/demoimagerepo:20
     - name: Run the container using the docker image
     #  shell: docker run --name=my-java-app-conatiner -p 8080:8080 --detach 016003963452.dkr.ecr.us-east-1.amazonaws.com/dockerdemopipeline:3
-      shell: docker run --name=java-app -p 8090:8080 --detach 107414687854.dkr.ecr.ap-south-1.amazonaws.com/demoimagerepo:20
+      shell: docker run --name=java-app -p 8080:8080 --detach 107414687854.dkr.ecr.ap-south-1.amazonaws.com/demoimagerepo:20
         
         
