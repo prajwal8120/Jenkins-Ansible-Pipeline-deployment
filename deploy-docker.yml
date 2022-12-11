@@ -26,10 +26,8 @@
     - name: Establish a login to ECR
       shell: aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 107414687854.dkr.ecr.ap-south-1.amazonaws.com
     - name: Pull the image from ECR to CD server
-    #  shell: docker pull 016003963452.dkr.ecr.us-east-1.amazonaws.com/dockerdemopipeline:3
       shell: docker pull 107414687854.dkr.ecr.ap-south-1.amazonaws.com/demoimagerepo:23
     - name: Run the container using the docker image
-    #  shell: docker run --name=my-java-app-conatiner -p 8080:8080 --detach 016003963452.dkr.ecr.us-east-1.amazonaws.com/dockerdemopipeline:3
-      shell: docker run --name=java-app -p 8080:8080 --detach 107414687854.dkr.ecr.ap-south-1.amazonaws.com/demoimagerepo:23
+      shell: docker run --name=javaapp-container -p 8080:8080 --detach 107414687854.dkr.ecr.ap-south-1.amazonaws.com/demoimagerepo:23
         
         
