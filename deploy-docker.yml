@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  become: true
+  become: True
   tasks:
     - name: Install python pip
       yum: 
@@ -10,7 +10,7 @@
       yum:
         name: docker
         state: present
-    - name: Start Docker
+    - name: start Docker
       service:
         name: docker
         state: started
