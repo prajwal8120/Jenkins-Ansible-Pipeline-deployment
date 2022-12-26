@@ -28,10 +28,10 @@
         name: git
         state: present
     - name: Establish a login to ECR
-      shell: aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 107414687854.dkr.ecr.ap-south-1.amazonaws.com
+      shell: aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 174392322073.dkr.ecr.ap-south-1.amazonaws.com
     - name: Pull the image from ECR to CD server
-      shell: docker pull 107414687854.dkr.ecr.ap-south-1.amazonaws.com/demoimagerepo:23
+      shell: docker pull 174392322073.dkr.ecr.ap-south-1.amazonaws.com/demo-ecr:18
     - name: Run the container using the docker image
-      shell: docker run --name=javaapp-container -p 8080:8080 --detach 107414687854.dkr.ecr.ap-south-1.amazonaws.com/demoimagerepo:23
+      shell: docker run --name=javaapp-container -p 8085:8080 --detach 174392322073.dkr.ecr.ap-south-1.amazonaws.com/demo-ecr:18
         
         
