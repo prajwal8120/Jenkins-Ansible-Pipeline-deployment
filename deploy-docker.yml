@@ -1,5 +1,5 @@
 ---
-- hosts: deploy-server
+- hosts: all
   become: True
   tasks:
     - name: Install python pip
