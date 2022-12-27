@@ -1,2 +1,2 @@
 [deploy]
-18.60.91.4 ansible_user=jenkinsadmin
+jenkinsadmin@172.31.9.145
