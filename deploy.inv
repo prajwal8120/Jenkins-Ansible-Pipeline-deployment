@@ -1,2 +1,2 @@
 [deploy]
-172.31.38.225 ansible_ssh_user=jenkinsadmin
+jenkinsadmin@172.31.38.225 
