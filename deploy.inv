@@ -1,2 +1,2 @@
 [deploy-server]
-172.31.38.225 ansible-user=jenkinsadmin
+node1@172.31.38.225 
