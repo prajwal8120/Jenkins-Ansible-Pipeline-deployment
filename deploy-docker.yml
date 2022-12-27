@@ -1,6 +1,6 @@
 ---
 - hosts: deploy
-  #become: True
+  become: true
   tasks:
     - name: Install python pip
       yum: 
