@@ -4,7 +4,7 @@
   tasks:
   - name: install docker
     yum:
-      pkg: docker.io
+      pkg: docker
       state: present
   - name: strat docker service
     service:
