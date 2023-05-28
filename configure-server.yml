@@ -6,7 +6,7 @@
     yum:
       pkg: docker
       state: present
-  - name: strat docker service
+  - name: start docker service
     service:
       name: docker
       state: started
